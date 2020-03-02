@@ -6,6 +6,8 @@ class CompaniesController < ApplicationController
 
   def show
     company = Company.find_by(id: params[:id])
-    render json: company
+    # render json: CompanySerializer.new(company)
+    company_shares = Price.all.select{|price| price.company = company}
+    render json: company_shares
   end
 end

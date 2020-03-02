@@ -5,5 +5,7 @@ class PricesController < ApplicationController
   end
 
   def show
+    price = Price.all.find_by(id: params[:id])
+    render json: price 
   end
 end

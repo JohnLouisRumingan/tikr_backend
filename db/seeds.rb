@@ -84,12 +84,7 @@ def createShares(user)
 end 
 
 
-for a in 1..6 do 
+# for a in 1..6 do 
     
-    createShares(User.third)
-end 
-
-
-# createShares(User.first, Company.first)
-# createShares(User.first, Company.first)
-# createShares(User.first, Company.second)
+#     createShares(User.third)
+# end 
