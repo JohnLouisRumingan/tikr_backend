@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    byebug
     users = User.all 
     render json: users
   end

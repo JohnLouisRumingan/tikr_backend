@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   get 'prices/show'
   get 'users/index'
   get 'users/show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
   resources :users, :shares, :companies, :prices, only: [:show, :index]
+  
+  namespace :auth do 
+    
+    post '/login', to: 'auth#fake_create'
+  end 
 end
