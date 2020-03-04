@@ -54,4 +54,10 @@ class SharesController < ApplicationController
         share_copy["user_id"] = new_share.user.id
         render json: share_copy
     end
+
+    #currently using a mode: no-cors in fetch header
+    def destroy 
+        share_to_be_sold = Share.all.find_by(id: params[:id])
+        share_to_be_sold.destroy
+    end 
 end

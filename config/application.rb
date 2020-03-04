@@ -22,6 +22,11 @@ module TikrAppBackend
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
+
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => 'http://localhost:3000',
+      'Access-Control-Request-Method' => %w{GET POST OPTIONS DELETE}.join(",")
+    }
     
   end
 end
