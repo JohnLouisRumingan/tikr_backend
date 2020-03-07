@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TIKR is a small stock trading platform with historical trading data. Due to API limitations, historical data is limited but app can scale with more companies. 
 
-Things you may want to cover:
+To run, please install Ruby and React.  
+This is the backend of the app. Please also go to the front end at https://github.com/jmr-1/tikr_frontend . Navigate to the installed directory on your terminal and run:
+>rails db:migrate
+>rails db:seed
+>rails server
 
-* Ruby version
+On the front end, run:
+>npm install
+>npm start 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Login uses a basic Username check. Use "John-Louis" as the username. Auth has not been implemented for this app. 
